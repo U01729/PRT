@@ -4,61 +4,31 @@ const partsData = [
         id: 'part1',
         name: 'الجزء الأول',
         size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/N2p3DJ8vnGMa/file' // استبدل برابط التحميل الفعلي
+        url: 'https://akirabox.to/qLQ36pD9wG19/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part2',
         name: 'الجزء الثاني',
-        size: '0.45 GB', // تم التعديل إلى GB
-        url: 'https://example.com/file2.zip' // استبدل برابط التحميل الفعلي
+        size: '9.77 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/0rpmv7bkw3Rg/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part3',
         name: 'الجزء الثالث',
-        size: '0.38 GB', // تم التعديل إلى GB
-        url: 'https://example.com/file3.zip' // استبدل برابط التحميل الفعلي
+        size: '9.77 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/gXeGORWP6zAa/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part4',
         name: 'الجزء الرابع',
-        size: '0.42 GB', // تم التعديل إلى GB
-        url: 'https://example.com/file4.zip' // استبدل برابط التحميل الفعلي
+        size: '9.77 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/N2p3DJ8vnGMa/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part5',
         name: 'الجزء الخامس',
-        size: '0.35 GB', // تم التعديل إلى GB
-        url: 'https://example.com/file5.zip' // استبدل برابط التحميل الفعلي
-    },
-    {
-        id: 'part6',
-        name: 'الجزء السادس',
-        size: '0.48 GB', // تم التعديل إلى GB
-        url: 'https://example.com/file6.zip' // استبدل برابط التحميل الفعلي
-    },
-    {
-        id: 'part7',
-        name: 'الجزء السابع',
-        size: '0.39 GB', // تم التعديل إلى GB
-        url: 'https://example.com/file7.zip' // استبدل برابط التحميل الفعلي
-    },
-    {
-        id: 'part8',
-        name: 'الجزء الثامن',
-        size: '0.46 GB', // تم التعديل إلى GB
-        url: 'https://example.com/file8.zip' // استبدل برابط التحميل الفعلي
-    },
-    {
-        id: 'part9',
-        name: 'الجزء التاسع',
-        size: '0.37 GB', // تم التعديل إلى GB
-        url: 'https://example.com/file9.zip' // استبدل برابط التحميل الفعلي
-    },
-    {
-        id: 'part10',
-        name: 'الجزء العاشر',
-        size: '0.44 GB', // تم التعديل إلى GB
-        url: 'https://example.com/file10.zip' // استبدل برابط التحميل الفعلي
+        size: '6.33 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/vgKGxobMnz8Q/file' // استبدل برابط التحميل الفعلي
     }
     // يمكن إضافة أي عدد من البارتات هنا
 ];
@@ -170,7 +140,7 @@ class PartsDownloader {
     }
 
     displayFileInfo() {
-        this.fullFileNameDisplay.textContent = 'Ghost of Tsushima Full Game.zip'; // اسم ملف افتراضي
+        this.fullFileNameDisplay.textContent = 'Ghost of Tsushima Game.pkg'; // اسم ملف افتراضي
         
         let totalSizeGB = 0;
         partsData.forEach(part => {
