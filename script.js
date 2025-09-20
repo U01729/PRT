@@ -71,7 +71,8 @@ class PartsDownloader {
         this.totalSpan = document.getElementById('total');
         this.percentageSpan = document.getElementById('percentage');
         this.progressFill = document.getElementById('progressFill');
-        // نقل تهيئة زر إعادة التعيين إلى init بعد التأكد من تحميل DOM
+        this.fullFileNameDisplay = document.getElementById('fullFileName'); // New element
+        this.totalFileSizeDisplay = document.getElementById('totalFileSize'); // New element
         this.resetButton = null; 
         
         this.init();
@@ -79,9 +80,10 @@ class PartsDownloader {
     
     init() {
         console.log('init method called.');
-        this.resetButton = document.getElementById('resetAllBtn'); // تهيئة الزر هنا
+        this.resetButton = document.getElementById('resetAllBtn'); 
         this.renderParts();
         this.updateProgress();
+        this.displayFileInfo(); // New method call
         this.setupEventListeners();
     }
     
@@ -171,6 +173,32 @@ class PartsDownloader {
         this.completedSpan.textContent = completed;
         this.percentageSpan.textContent = `${percentage}%`;
         this.progressFill.style.width = `${percentage}%`;
+    }
+
+    displayFileInfo() {
+        // يمكنك تعديل هذا الاسم ليعكس اسم الملف الفعلي
+        this.fullFileNameDisplay.textContent = 'اسم الملف الرئيسي بعد فك الضغط.zip'; 
+        
+        let totalSizeMB = 0;
+        partsData.forEach(part => {
+            const sizeMatch = part.size.match(/(\d+)\s*(MB|GB)/i);
+            if (sizeMatch) {
+                let size = parseFloat(sizeMatch[1]);
+                const unit = sizeMatch[2].toUpperCase();
+                if (unit === 'GB') {
+                    size *= 1024; // تحويل جيجابايت إلى ميجابايت
+                }
+                totalSizeMB += size;
+            }
+        });
+
+        let displaySize;
+        if (totalSizeMB >= 1024) {
+            displaySize = `${(totalSizeMB / 1024).toFixed(2)} GB`;
+        } else {
+            displaySize = `${totalSizeMB.toFixed(2)} MB`;
+        }
+        this.totalFileSizeDisplay.textContent = displaySize;
     }
 
     setupEventListeners() {

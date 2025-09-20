@@ -68,6 +68,34 @@ body {
     border-radius: 4px;
 }
 
+/* File Info Section */
+.file-info-section {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.file-name-display,
+.total-size-display {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #eee;
+}
+
+.file-name-display span:first-child,
+.total-size-display span:first-child {
+    color: #bbb;
+    margin-left: 5px;
+}
+
 /* Parts Grid */
 .parts-grid {
     display: grid;
@@ -294,6 +322,11 @@ body {
         padding: 8px 15px;
         font-size: 0.9rem;
     }
+
+    .file-info-section {
+        padding: 15px;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -345,6 +378,11 @@ body {
     .reset-btn {
         padding: 7px 12px;
         font-size: 0.8rem;
+    }
+
+    .file-info-section {
+        padding: 10px;
+        font-size: 0.9rem;
     }
 }
 
