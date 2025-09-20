@@ -65,6 +65,7 @@ const partsData = [
 
 class PartsDownloader {
     constructor() {
+        console.log('PartsDownloader constructor called.');
         this.partsContainer = document.getElementById('partsContainer');
         this.completedSpan = document.getElementById('completed');
         this.totalSpan = document.getElementById('total');
@@ -76,12 +77,14 @@ class PartsDownloader {
     }
     
     init() {
+        console.log('init method called.');
         this.renderParts();
         this.updateProgress();
         this.setupEventListeners();
     }
     
     renderParts() {
+        console.log('renderParts method called.');
         this.partsContainer.innerHTML = '';
         
         partsData.forEach((part, index) => {
@@ -169,19 +172,27 @@ class PartsDownloader {
     }
 
     setupEventListeners() {
+        console.log('setupEventListeners called.');
         if (this.resetButton) {
+            console.log('Reset button found. Adding event listener.');
             this.resetButton.addEventListener('click', () => this.resetAllParts());
+        } else {
+            console.log('Reset button not found.');
         }
     }
 
     resetAllParts() {
+        console.log('resetAllParts called.');
         if (confirm('هل أنت متأكد أنك تريد إعادة تعيين حالة جميع البارتات؟')) {
+            console.log('Confirmation received. Resetting parts.');
             partsData.forEach(part => {
                 localStorage.removeItem(part.id);
             });
             this.renderParts();
             this.updateProgress();
             alert('تمت إعادة تعيين جميع البارتات بنجاح!');
+        } else {
+            console.log('Reset cancelled by user.');
         }
     }
 }
@@ -189,6 +200,7 @@ class PartsDownloader {
 // تشغيل التطبيق
 let partsDownloader;
 window.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded event fired.');
     partsDownloader = new PartsDownloader();
 });
 
