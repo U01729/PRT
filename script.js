@@ -71,6 +71,7 @@ class PartsDownloader {
         this.totalSpan = document.getElementById('total');
         this.percentageSpan = document.getElementById('percentage');
         this.progressFill = document.getElementById('progressFill');
+        // تأكد من أن الزر موجود قبل محاولة الوصول إليه
         this.resetButton = document.getElementById('resetAllBtn');
         
         this.init();
