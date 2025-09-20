@@ -71,14 +71,15 @@ class PartsDownloader {
         this.totalSpan = document.getElementById('total');
         this.percentageSpan = document.getElementById('percentage');
         this.progressFill = document.getElementById('progressFill');
-        // تأكد من أن الزر موجود قبل محاولة الوصول إليه
-        this.resetButton = document.getElementById('resetAllBtn');
+        // نقل تهيئة زر إعادة التعيين إلى init بعد التأكد من تحميل DOM
+        this.resetButton = null; 
         
         this.init();
     }
     
     init() {
         console.log('init method called.');
+        this.resetButton = document.getElementById('resetAllBtn'); // تهيئة الزر هنا
         this.renderParts();
         this.updateProgress();
         this.setupEventListeners();
@@ -178,7 +179,7 @@ class PartsDownloader {
             console.log('Reset button found. Adding event listener.');
             this.resetButton.addEventListener('click', () => this.resetAllParts());
         } else {
-            console.log('Reset button not found.');
+            console.log('Reset button not found in setupEventListeners.');
         }
     }
 
@@ -201,7 +202,7 @@ class PartsDownloader {
 // تشغيل التطبيق
 let partsDownloader;
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('DOMContentLoaded event fired.');
+    console.log('DOMContentLoaded event fired. Initializing PartsDownloader.');
     partsDownloader = new PartsDownloader();
 });
 
