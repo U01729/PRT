@@ -4,31 +4,55 @@ const partsData = [
         id: 'part1',
         name: 'الجزء الأول',
         size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/qLQ36pD9wG19/file' // استبدل برابط التحميل الفعلي
+        url: 'https://akirabox.to/vgKGxojN4z8Q/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part2',
         name: 'الجزء الثاني',
         size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/0rpmv7bkw3Rg/file' // استبدل برابط التحميل الفعلي
+        url: 'https://akirabox.to/Z9dzBjYgOzk1/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part3',
         name: 'الجزء الثالث',
         size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/gXeGORWP6zAa/file' // استبدل برابط التحميل الفعلي
+        url: 'https://akirabox.to/EL73gjWNYm9B/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part4',
         name: 'الجزء الرابع',
         size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/N2p3DJ8vnGMa/file' // استبدل برابط التحميل الفعلي
+        url: 'https://akirabox.to/QN9mEYWJym6d/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part5',
         name: 'الجزء الخامس',
-        size: '6.33 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/vgKGxobMnz8Q/file' // استبدل برابط التحميل الفعلي
+        size: '9.77 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/M2BGwwdNMGj4/file' // استبدل برابط التحميل الفعلي
+    },
+    {
+        id: 'part6',
+        name: 'الجزء السادس',
+        size: '9.77 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/2WVGrQrNEzkx/file' // استبدل برابط التحميل الفعلي
+    },
+    {
+        id: 'part7',
+        name: 'الجزء السابع',
+        size: '9.77 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/N2p3DJMBAGMa/file' // استبدل برابط التحميل الفعلي
+    },
+    {
+        id: 'part8',
+        name: 'الجزء الثامن',
+        size: '9.77 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/0rpmv7JVa3Rg/file' // استبدل برابط التحميل الفعلي
+    },
+    {
+        id: 'part9',
+        name: 'الجزء التاسع',
+        size: '1.38 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/b5OzdRWlymB8/file' // استبدل برابط التحميل الفعلي
     }
     // يمكن إضافة أي عدد من البارتات هنا
 ];
@@ -140,7 +164,7 @@ class PartsDownloader {
     }
 
     displayFileInfo() {
-        this.fullFileNameDisplay.textContent = 'Ghost of Tsushima Game.pkg'; // اسم ملف افتراضي
+        this.fullFileNameDisplay.textContent = 'Red Dead Redemption 2 Arabic Game.pkg'; // اسم ملف افتراضي
         
         let totalSizeGB = 0;
         partsData.forEach(part => {
