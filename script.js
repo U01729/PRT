@@ -70,6 +70,7 @@ class PartsDownloader {
         this.totalSpan = document.getElementById('total');
         this.percentageSpan = document.getElementById('percentage');
         this.progressFill = document.getElementById('progressFill');
+        this.resetButton = document.getElementById('resetAllBtn');
         
         this.init();
     }
@@ -77,6 +78,7 @@ class PartsDownloader {
     init() {
         this.renderParts();
         this.updateProgress();
+        this.setupEventListeners();
     }
     
     renderParts() {
@@ -164,6 +166,23 @@ class PartsDownloader {
         this.completedSpan.textContent = completed;
         this.percentageSpan.textContent = `${percentage}%`;
         this.progressFill.style.width = `${percentage}%`;
+    }
+
+    setupEventListeners() {
+        if (this.resetButton) {
+            this.resetButton.addEventListener('click', () => this.resetAllParts());
+        }
+    }
+
+    resetAllParts() {
+        if (confirm('هل أنت متأكد أنك تريد إعادة تعيين حالة جميع البارتات؟')) {
+            partsData.forEach(part => {
+                localStorage.removeItem(part.id);
+            });
+            this.renderParts();
+            this.updateProgress();
+            alert('تمت إعادة تعيين جميع البارتات بنجاح!');
+        }
     }
 }
 
