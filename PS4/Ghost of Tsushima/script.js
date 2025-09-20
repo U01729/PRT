@@ -174,9 +174,10 @@ class PartsDownloader {
         
         let totalSizeGB = 0;
         partsData.forEach(part => {
-            const sizeMatch = part.size.match(/(\d+\.?\d*)\s*GB/i); // البحث عن أرقام ووحدة GB
-            if (sizeMatch) {
-                totalSizeGB += parseFloat(sizeMatch[1]);
+            // التأكد من أن الحجم بصيغة 'X.XX GB' واستخراج القيمة الرقمية
+            const sizeValue = parseFloat(part.size.replace(' GB', ''));
+            if (!isNaN(sizeValue)) {
+                totalSizeGB += sizeValue;
             }
         });
 
