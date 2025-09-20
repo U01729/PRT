@@ -2,28 +2,69 @@
 const partsData = [
     {
         id: 'part1',
-        name: 'Part 1',
-        size: '250 MB',
-        url: 'https://example.com/file1.zip'
+        name: 'الجزء الأول',
+        size: '500 MB',
+        url: 'https://example.com/file1.zip' // استبدل برابط التحميل الفعلي
     },
     {
-        id: 'part2', 
-        name: 'Part 2',
-        size: '250 MB',
-        url: 'https://example.com/file2.zip'
+        id: 'part2',
+        name: 'الجزء الثاني',
+        size: '450 MB',
+        url: 'https://example.com/file2.zip' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part3',
-        name: 'Part 3', 
-        size: '180 MB',
-        url: 'https://example.com/file3.zip'
+        name: 'الجزء الثالث',
+        size: '380 MB',
+        url: 'https://example.com/file3.zip' // استبدل برابط التحميل الفعلي
+    },
+    {
+        id: 'part4',
+        name: 'الجزء الرابع',
+        size: '420 MB',
+        url: 'https://example.com/file4.zip' // استبدل برابط التحميل الفعلي
+    },
+    {
+        id: 'part5',
+        name: 'الجزء الخامس',
+        size: '350 MB',
+        url: 'https://example.com/file5.zip' // استبدل برابط التحميل الفعلي
+    },
+    {
+        id: 'part6',
+        name: 'الجزء السادس',
+        size: '480 MB',
+        url: 'https://example.com/file6.zip' // استبدل برابط التحميل الفعلي
+    },
+    {
+        id: 'part7',
+        name: 'الجزء السابع',
+        size: '390 MB',
+        url: 'https://example.com/file7.zip' // استبدل برابط التحميل الفعلي
+    },
+    {
+        id: 'part8',
+        name: 'الجزء الثامن',
+        size: '460 MB',
+        url: 'https://example.com/file8.zip' // استبدل برابط التحميل الفعلي
+    },
+    {
+        id: 'part9',
+        name: 'الجزء التاسع',
+        size: '370 MB',
+        url: 'https://example.com/file9.zip' // استبدل برابط التحميل الفعلي
+    },
+    {
+        id: 'part10',
+        name: 'الجزء العاشر',
+        size: '440 MB',
+        url: 'https://example.com/file10.zip' // استبدل برابط التحميل الفعلي
     }
     // يمكن إضافة أي عدد من البارتات هنا
 ];
 
 class PartsDownloader {
     constructor() {
-        console.log('PartsDownloader constructor called.');
         this.partsContainer = document.getElementById('partsContainer');
         this.completedSpan = document.getElementById('completed');
         this.totalSpan = document.getElementById('total');
@@ -34,24 +75,19 @@ class PartsDownloader {
     }
     
     init() {
-        console.log('init method called.');
         this.renderParts();
         this.updateProgress();
     }
     
     renderParts() {
-        console.log('renderParts method called.');
-        console.log('partsData:', partsData);
         this.partsContainer.innerHTML = '';
         
         partsData.forEach((part, index) => {
-            console.log('Creating card for part:', part.name);
             const partCard = this.createPartCard(part, index + 1);
             this.partsContainer.appendChild(partCard);
         });
         
         this.totalSpan.textContent = partsData.length;
-        console.log('Total parts:', partsData.length);
     }
     
     createPartCard(part, number) {
@@ -87,7 +123,6 @@ class PartsDownloader {
     }
     
     downloadPart(url, partId) {
-        console.log('downloadPart called for:', partId);
         const card = document.querySelector(`[data-part-id="${partId}"]`);
         const btn = card.querySelector('.download-btn');
         const statusText = card.querySelector('.status-text');
@@ -119,7 +154,6 @@ class PartsDownloader {
     }
     
     updateProgress() {
-        console.log('updateProgress called.');
         const completed = partsData.filter(part => 
             localStorage.getItem(part.id) === 'downloaded'
         ).length;
@@ -130,14 +164,12 @@ class PartsDownloader {
         this.completedSpan.textContent = completed;
         this.percentageSpan.textContent = `${percentage}%`;
         this.progressFill.style.width = `${percentage}%`;
-        console.log(`Progress: ${completed}/${total} (${percentage}%)`);
     }
 }
 
 // تشغيل التطبيق
 let partsDownloader;
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('DOMContentLoaded event fired.');
     partsDownloader = new PartsDownloader();
 });
 
