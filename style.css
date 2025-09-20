@@ -1,4 +1,3 @@
-/* إعدادات عامة */
 * {
     margin: 0;
     padding: 0;
@@ -10,267 +9,206 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     padding: 20px;
-    direction: rtl;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-height: 90vh;
 }
 
-/* رأس الصفحة */
-header {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    color: white;
-    padding: 25px;
+.main-header {
     text-align: center;
+    margin-bottom: 40px;
+    color: white;
 }
 
-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 8px;
-    font-weight: 700;
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-header p {
-    font-size: 1rem;
-    opacity: 0.9;
+.overall-progress {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-/* المحتوى الرئيسي */
-main {
-    padding: 25px;
-    max-height: calc(90vh - 120px);
-    overflow-y: auto;
-}
-
-.parts-container {
-    margin-bottom: 25px;
-    max-height: 50vh;
-    overflow-y: auto;
-    padding-right: 10px;
-}
-
-/* تخصيص شريط التمرير */
-.parts-container::-webkit-scrollbar {
-    width: 8px;
-}
-
-.parts-container::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.parts-container::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
-    border-radius: 10px;
-}
-
-.parts-container::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #00f2fe, #4facfe);
-}
-
-/* بطاقة البارت */
-.part {
+.progress-text {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background: #f8f9fa;
-    border: 2px solid #e9ecef;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 12px;
-    transition: all 0.3s ease;
-}
-
-.part:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    border-color: #4facfe;
-}
-
-.part.downloaded {
-    background: #d4edda;
-    border-color: #28a745;
-}
-
-.part-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.part-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
-}
-
-.part-size {
-    font-size: 0.85rem;
-    color: #666;
-    background: #e9ecef;
-    padding: 3px 8px;
-    border-radius: 12px;
-}
-
-/* أزرار التحميل */
-.download-btn {
-    background: linear-gradient(135deg, #28a745, #20c997);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 18px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    min-width: 110px;
-    justify-content: center;
-}
-
-.download-btn:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
-}
-
-.download-btn.downloaded {
-    background: #28a745;
-    cursor: default;
-}
-
-.download-btn.downloaded:hover {
-    transform: none;
-}
-
-/* حالة التحميل */
-.status {
-    font-size: 1.3rem;
-    margin-left: 8px;
-}
-
-/* الأزرار العامة */
-.actions {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.reset-btn {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: linear-gradient(135deg, #dc3545, #c82333);
-    color: white;
-}
-
-.reset-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
-}
-
-/* عرض الحجم الكلي */
-.total-size {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 15px;
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    border-radius: 15px;
-    border: 2px solid #dee2e6;
-}
-
-.total-size span {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #495057;
-}
-
-#totalSize {
-    color: #007bff;
-    font-weight: 700;
-}
-
-/* شريط التقدم */
-.progress {
-    text-align: center;
-}
-
-#progressText {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
-    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .progress-bar {
-    background: #e9ecef;
-    border-radius: 25px;
-    height: 10px;
+    height: 8px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 4px;
     overflow: hidden;
-    margin: 0 auto;
-    max-width: 400px;
 }
 
 .progress-fill {
-    background: linear-gradient(135deg, #28a745, #20c997);
     height: 100%;
+    background: linear-gradient(90deg, #00ff88, #00cc6a);
     width: 0%;
     transition: width 0.5s ease;
-    border-radius: 25px;
+    border-radius: 4px;
 }
 
-/* التصميم المتجاوب */
+.parts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.part-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.part-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.6s;
+}
+
+.part-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.part-card:hover::before {
+    left: 100%;
+}
+
+.part-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.part-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 15px;
+}
+
+.part-info h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.part-size {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.download-section {
+    text-align: center;
+}
+
+.download-btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.download-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.download-btn:active {
+    transform: scale(0.95);
+}
+
+.status-text {
+    color: #666;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* حالة التحميل المكتمل */
+.part-card.downloaded {
+    background: rgba(46, 204, 113, 0.1);
+    border-color: rgba(46, 204, 113, 0.3);
+}
+
+.part-card.downloaded .download-btn {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.part-card.downloaded .status-text {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.part-card.downloaded .part-number {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+/* تأثير الانيميشن */
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.part-card.just-downloaded {
+    animation: successPulse 0.6s ease;
+}
+
+/* استجابة للشاشات الصغيرة */
 @media (max-width: 768px) {
-    .container {
-        margin: 10px;
-        border-radius: 10px;
+    .parts-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
     
-    header {
-        padding: 20px;
-    }
-    
-    header h1 {
+    .main-header h1 {
         font-size: 2rem;
     }
     
-    main {
+    .part-card {
         padding: 20px;
     }
-    
-    .part {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .part-info {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .actions {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .download-all-btn, .reset-btn {
-        width: 100%;
-        max-width: 250px;
-    }
 }
+
 

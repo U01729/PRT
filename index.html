@@ -3,37 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحة تحميل الملفات المتعددة</title>
+    <title>Parts Downloader Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>تحميل الملفات المتعددة</h1>
-            <p>اضغط على زر التحميل لأي ملف لفتحه في نافذة جديدة</p>
-        </header>
-        
-        <main>
-            <div class="parts-container">
-                <!-- سيتم إضافة البارتات هنا -->
-            </div>
-            
-            <div class="actions">
-                <button id="resetAll" class="reset-btn">إعادة تعيين الحالة</button>
-            </div>
-            <div class="total-size">
-                <span>الحجم الكلي: <span id="totalSize">0 MB</span></span>
-            </div>
-            
-            <div class="progress">
-                <span id="progressText">تم تحميل 0 من 0 ملف</span>
+        <header class="main-header">
+            <h1>🗂️ مركز تحميل البارتات</h1>
+            <div class="overall-progress">
+                <div class="progress-text">
+                    <span>التقدم: <span id="completed">0</span>/<span id="total">0</span></span>
+                    <span id="percentage">0%</span>
+                </div>
                 <div class="progress-bar">
-                    <div id="progressFill" class="progress-fill"></div>
+                    <div class="progress-fill" id="progressFill"></div>
                 </div>
             </div>
+        </header>
+
+        <main class="parts-grid" id="partsContainer">
+            <!-- البارتات ستُضاف هنا ديناميكياً -->
         </main>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
