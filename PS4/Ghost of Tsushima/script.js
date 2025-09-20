@@ -3,8 +3,8 @@ const partsData = [
     {
         id: 'part1',
         name: 'الجزء الأول',
-        size: '0.5 GB', // تم التعديل إلى GB
-        url: 'https://example.com/file1.zip' // استبدل برابط التحميل الفعلي
+        size: '9.77 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/N2p3DJ8vnGMa/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part2',
