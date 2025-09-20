@@ -3,13 +3,13 @@ const partsData = [
     {
         id: 'part1',
         name: 'الجزء الأول',
-        size: '20 GB', // تم التعديل إلى GB
+        size: '20.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/1RgzRjePXzbp/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part2',
         name: 'الجزء الثاني',
-        size: '20 GB', // تم التعديل إلى GB
+        size: '20.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/Pbe3PJKj2GlX/file' // استبدل برابط التحميل الفعلي
     },
     {
@@ -17,8 +17,7 @@ const partsData = [
         name: 'الجزء الثالث',
         size: '3.12 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/RMKGJXP2V31o/file' // استبدل برابط التحميل الفعلي
-    },
-    {
+    }
     // يمكن إضافة أي عدد من البارتات هنا
 ];
 
