@@ -3,61 +3,61 @@ const partsData = [
     {
         id: 'part1',
         name: 'الجزء الأول',
-        size: '500 MB',
+        size: '0.5 GB', // تم التعديل إلى GB
         url: 'https://example.com/file1.zip' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part2',
         name: 'الجزء الثاني',
-        size: '450 MB',
+        size: '0.45 GB', // تم التعديل إلى GB
         url: 'https://example.com/file2.zip' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part3',
         name: 'الجزء الثالث',
-        size: '380 MB',
+        size: '0.38 GB', // تم التعديل إلى GB
         url: 'https://example.com/file3.zip' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part4',
         name: 'الجزء الرابع',
-        size: '420 MB',
+        size: '0.42 GB', // تم التعديل إلى GB
         url: 'https://example.com/file4.zip' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part5',
         name: 'الجزء الخامس',
-        size: '350 MB',
+        size: '0.35 GB', // تم التعديل إلى GB
         url: 'https://example.com/file5.zip' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part6',
         name: 'الجزء السادس',
-        size: '480 MB',
+        size: '0.48 GB', // تم التعديل إلى GB
         url: 'https://example.com/file6.zip' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part7',
         name: 'الجزء السابع',
-        size: '390 MB',
+        size: '0.39 GB', // تم التعديل إلى GB
         url: 'https://example.com/file7.zip' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part8',
         name: 'الجزء الثامن',
-        size: '460 MB',
+        size: '0.46 GB', // تم التعديل إلى GB
         url: 'https://example.com/file8.zip' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part9',
         name: 'الجزء التاسع',
-        size: '370 MB',
+        size: '0.37 GB', // تم التعديل إلى GB
         url: 'https://example.com/file9.zip' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part10',
         name: 'الجزء العاشر',
-        size: '440 MB',
+        size: '0.44 GB', // تم التعديل إلى GB
         url: 'https://example.com/file10.zip' // استبدل برابط التحميل الفعلي
     }
     // يمكن إضافة أي عدد من البارتات هنا
@@ -71,8 +71,8 @@ class PartsDownloader {
         this.totalSpan = document.getElementById('total');
         this.percentageSpan = document.getElementById('percentage');
         this.progressFill = document.getElementById('progressFill');
-        this.fullFileNameDisplay = document.getElementById('fullFileName'); // New element
-        this.totalFileSizeDisplay = document.getElementById('totalFileSize'); // New element
+        this.fullFileNameDisplay = document.getElementById('fullFileName');
+        this.totalFileSizeDisplay = document.getElementById('totalFileSize');
         this.resetButton = null; 
         
         this.init();
@@ -83,7 +83,7 @@ class PartsDownloader {
         this.resetButton = document.getElementById('resetAllBtn'); 
         this.renderParts();
         this.updateProgress();
-        this.displayFileInfo(); // New method call
+        this.displayFileInfo();
         this.setupEventListeners();
     }
     
@@ -136,27 +136,21 @@ class PartsDownloader {
         const btn = card.querySelector('.download-btn');
         const statusText = card.querySelector('.status-text');
         
-        // تأثير النقر
         btn.style.transform = 'scale(0.9)';
         setTimeout(() => {
             btn.style.transform = 'scale(1)';
         }, 150);
         
-        // تغيير الحالة
         card.classList.add('downloaded', 'just-downloaded');
         btn.innerHTML = '✅';
         statusText.textContent = 'تم التحميل';
         
-        // حفظ الحالة
         localStorage.setItem(partId, 'downloaded');
         
-        // تحديث التقدم
         this.updateProgress();
         
-        // فتح الرابط
         window.open(url, '_blank');
         
-        // إزالة تأثير الانيميشن
         setTimeout(() => {
             card.classList.remove('just-downloaded');
         }, 600);
@@ -176,29 +170,17 @@ class PartsDownloader {
     }
 
     displayFileInfo() {
-        // يمكنك تعديل هذا الاسم ليعكس اسم الملف الفعلي
-        this.fullFileNameDisplay.textContent = 'اسم الملف الرئيسي بعد فك الضغط.zip'; 
+        this.fullFileNameDisplay.textContent = 'Ghost of Tsushima Full Game.zip'; // اسم ملف افتراضي
         
-        let totalSizeMB = 0;
+        let totalSizeGB = 0;
         partsData.forEach(part => {
-            const sizeMatch = part.size.match(/(\d+)\s*(MB|GB)/i);
+            const sizeMatch = part.size.match(/(\d+\.?\d*)\s*GB/i); // البحث عن أرقام ووحدة GB
             if (sizeMatch) {
-                let size = parseFloat(sizeMatch[1]);
-                const unit = sizeMatch[2].toUpperCase();
-                if (unit === 'GB') {
-                    size *= 1024; // تحويل جيجابايت إلى ميجابايت
-                }
-                totalSizeMB += size;
+                totalSizeGB += parseFloat(sizeMatch[1]);
             }
         });
 
-        let displaySize;
-        if (totalSizeMB >= 1024) {
-            displaySize = `${(totalSizeMB / 1024).toFixed(2)} GB`;
-        } else {
-            displaySize = `${totalSizeMB.toFixed(2)} MB`;
-        }
-        this.totalFileSizeDisplay.textContent = displaySize;
+        this.totalFileSizeDisplay.textContent = `${totalSizeGB.toFixed(2)} GB`;
     }
 
     setupEventListeners() {
@@ -233,4 +215,5 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log('DOMContentLoaded event fired. Initializing PartsDownloader.');
     partsDownloader = new PartsDownloader();
 });
+
 
