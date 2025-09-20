@@ -3,102 +3,102 @@ const partsData = [
     {
         id: 'part1',
         name: 'الجزء الأول',
-        size: '5 GB', // تم التعديل إلى GB
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/LK0G1vbPwm91/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part2',
         name: 'الجزء الثاني',
-        size: '5 GB', // تم التعديل إلى GB
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/qLQ36oqjEz19/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part3',
         name: 'الجزء الثالث',
-        size: '5 GB', // تم التعديل إلى GB
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/1RgzRj9rXzbp/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part4',
         name: 'الجزء الرابع',
-        size: '5 GB', // تم التعديل إلى GB
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/Z9dzBkP1gGk1/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part5',
         name: 'الجزء الخامس',
-        size: '5 GB', // تم التعديل إلى GB
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/2WVGrqdAWzkx/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part6',
-        name: 'الجزء الرابع',
-        size: '5 GB', // تم التعديل إلى GB
+        name: 'الجزء السادس',
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/LJlGnV7RjG15/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part7',
-        name: 'الجزء الرابع',
-        size: '5 GB', // تم التعديل إلى GB
+        name: 'الجزء السابع',
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/1RgzRj9qPzbp/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part8',
-        name: 'الجزء الرابع',
-        size: '5 GB', // تم التعديل إلى GB
+        name: 'الجزء الثامن',
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/QN9mEbd4L36d/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part9',
-        name: 'الجزء الرابع',
-        size: '5 GB', // تم التعديل إلى GB
+        name: 'الجزء التاسع',
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/dkD3YqDel3LQ/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part10',
-        name: 'الجزء الأول',
-        size: '5 GB', // تم التعديل إلى GB
+        name: 'الجزء العاشر',
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/M2BGw6LDNzj4/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part11',
-        name: 'الجزء الثاني',
-        size: '5 GB', // تم التعديل إلى GB
+        name: 'الجزء الحادي عشر',
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/2WVGrqWwkzkx/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part12',
-        name: 'الجزء الثالث',
-        size: '5 GB', // تم التعديل إلى GB
+        name: 'الجزء الثاني عشر',
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/BnkmWq69QzR0/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part13',
-        name: 'الجزء الرابع',
-        size: '5 GB', // تم التعديل إلى GB
+        name: 'الجزء الثالث عشر',
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/rk9zKr0q530l/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part14',
-        name: 'الجزء الخامس',
-        size: '5 GB', // تم التعديل إلى GB
+        name: 'الجزء الرابع عشر',
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/9AqGQB87RmMn/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part15',
-        name: 'الجزء الرابع',
-        size: '5 GB', // تم التعديل إلى GB
+        name: 'الجزء الخامس عشر',
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/LK0G1va0Jm91/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part16',
-        name: 'الجزء الرابع',
-        size: '5 GB', // تم التعديل إلى GB
+        name: 'الجزء السادس عشر',
+        size: '5.0 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/1RgzRj0v1zbp/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part17',
-        name: 'الجزء الرابع',
+        name: 'الجزء السابع عشر',
         size: '2.01 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/2bJG81lagmOB/file' // استبدل برابط التحميل الفعلي
     }
