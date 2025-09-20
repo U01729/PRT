@@ -23,6 +23,7 @@ const partsData = [
 
 class PartsDownloader {
     constructor() {
+        console.log('PartsDownloader constructor called.');
         this.partsContainer = document.getElementById('partsContainer');
         this.completedSpan = document.getElementById('completed');
         this.totalSpan = document.getElementById('total');
@@ -33,19 +34,24 @@ class PartsDownloader {
     }
     
     init() {
+        console.log('init method called.');
         this.renderParts();
         this.updateProgress();
     }
     
     renderParts() {
+        console.log('renderParts method called.');
+        console.log('partsData:', partsData);
         this.partsContainer.innerHTML = '';
         
         partsData.forEach((part, index) => {
+            console.log('Creating card for part:', part.name);
             const partCard = this.createPartCard(part, index + 1);
             this.partsContainer.appendChild(partCard);
         });
         
         this.totalSpan.textContent = partsData.length;
+        console.log('Total parts:', partsData.length);
     }
     
     createPartCard(part, number) {
@@ -81,6 +87,7 @@ class PartsDownloader {
     }
     
     downloadPart(url, partId) {
+        console.log('downloadPart called for:', partId);
         const card = document.querySelector(`[data-part-id="${partId}"]`);
         const btn = card.querySelector('.download-btn');
         const statusText = card.querySelector('.status-text');
@@ -112,6 +119,7 @@ class PartsDownloader {
     }
     
     updateProgress() {
+        console.log('updateProgress called.');
         const completed = partsData.filter(part => 
             localStorage.getItem(part.id) === 'downloaded'
         ).length;
@@ -122,12 +130,14 @@ class PartsDownloader {
         this.completedSpan.textContent = completed;
         this.percentageSpan.textContent = `${percentage}%`;
         this.progressFill.style.width = `${percentage}%`;
+        console.log(`Progress: ${completed}/${total} (${percentage}%)`);
     }
 }
 
 // تشغيل التطبيق
 let partsDownloader;
 window.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded event fired.');
     partsDownloader = new PartsDownloader();
 });
 
