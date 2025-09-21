@@ -2,33 +2,27 @@
 const partsData = [
     {
         id: 'part1',
-        name: 'الجزء الأول',
+        name: 'البارت الأول',
         size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/qLQ36pD9wG19/file' // استبدل برابط التحميل الفعلي
+        url: 'https://akirabox.to/wgWGqqR0xG4o/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part2',
-        name: 'الجزء الثاني',
+        name: 'البارت الثاني',
         size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/0rpmv7bkw3Rg/file' // استبدل برابط التحميل الفعلي
+        url: 'https://akirabox.to/0JgG70rO5moY/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part3',
-        name: 'الجزء الثالث',
+        name: 'البارت الثالث',
         size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/gXeGORWP6zAa/file' // استبدل برابط التحميل الفعلي
+        url: 'https://akirabox.to/9AqGQR918mMn/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part4',
-        name: 'الجزء الرابع',
-        size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/N2p3DJ8vnGMa/file' // استبدل برابط التحميل الفعلي
-    },
-    {
-        id: 'part5',
-        name: 'الجزء الخامس',
-        size: '6.33 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/vgKGxobMnz8Q/file' // استبدل برابط التحميل الفعلي
+        name: 'البارت الرابع',
+        size: '5.55 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/jar3XqJ7jz2d/file' // استبدل برابط التحميل الفعلي
     }
     // يمكن إضافة أي عدد من البارتات هنا
 ];
@@ -140,7 +134,7 @@ class PartsDownloader {
     }
 
     displayFileInfo() {
-        this.fullFileNameDisplay.textContent = 'Ghost of Tsushima Game.pkg'; // اسم ملف افتراضي
+        this.fullFileNameDisplay.textContent = 'A Plague Tale Innocence.pkg'; // اسم ملف افتراضي
         
         let totalSizeGB = 0;
         partsData.forEach(part => {
