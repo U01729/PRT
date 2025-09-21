@@ -2,33 +2,21 @@
 const partsData = [
     {
         id: 'part1',
-        name: 'الجزء الأول',
-        size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/qLQ36pD9wG19/file' // استبدل برابط التحميل الفعلي
+        name: 'البارت الأول',
+        size: '2.93 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/LK0G1e6vaG91/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part2',
-        name: 'الجزء الثاني',
-        size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/0rpmv7bkw3Rg/file' // استبدل برابط التحميل الفعلي
+        name: 'البارت الثاني',
+        size: '2.93 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/EL73gj5bYm9B/file' // استبدل برابط التحميل الفعلي
     },
     {
         id: 'part3',
-        name: 'الجزء الثالث',
-        size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/gXeGORWP6zAa/file' // استبدل برابط التحميل الفعلي
-    },
-    {
-        id: 'part4',
-        name: 'الجزء الرابع',
-        size: '9.77 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/N2p3DJ8vnGMa/file' // استبدل برابط التحميل الفعلي
-    },
-    {
-        id: 'part5',
-        name: 'الجزء الخامس',
-        size: '6.33 GB', // تم التعديل إلى GB
-        url: 'https://akirabox.to/vgKGxobMnz8Q/file' // استبدل برابط التحميل الفعلي
+        name: 'البارت الثالث',
+        size: '1.44 GB', // تم التعديل إلى GB
+        url: 'https://akirabox.to/qLQ36pwoQG19/file' // استبدل برابط التحميل الفعلي
     }
     // يمكن إضافة أي عدد من البارتات هنا
 ];
@@ -140,7 +128,7 @@ class PartsDownloader {
     }
 
     displayFileInfo() {
-        this.fullFileNameDisplay.textContent = 'Ghost of Tsushima Game.pkg'; // اسم ملف افتراضي
+        this.fullFileNameDisplay.textContent = 'Far Cry 3 Classic Edition.pkg'; // اسم ملف افتراضي
         
         let totalSizeGB = 0;
         partsData.forEach(part => {
