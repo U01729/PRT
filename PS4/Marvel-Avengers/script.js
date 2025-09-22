@@ -152,7 +152,7 @@ class PartsDownloader {
     }
 
     displayFileInfo() {
-        this.fullFileNameDisplay.textContent = 'Marvel Avengers.pkg'; // اسم ملف افتراضي
+        this.fullFileNameDisplay.textContent = 'Marvel Avengers update.pkg'; // اسم ملف افتراضي
         
         let totalSizeGB = 0;
         partsData.forEach(part => {
