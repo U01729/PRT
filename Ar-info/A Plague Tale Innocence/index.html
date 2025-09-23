@@ -5,46 +5,63 @@
   <title>تعريب الألعاب</title>
   <style>
     body {
-      font-family: "Tahoma", sans-serif;
-      background-color: #121212;
-      color: #fff;
+      font-family: "Cairo", Tahoma, sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
     }
     .container {
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 850px;
+      margin: 50px auto;
       padding: 20px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+      text-align: center;
     }
     .game-img {
       width: 100%;
       max-height: 400px;
       object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+      border-radius: 16px;
+      margin-bottom: 20px;
     }
     h1 {
-      margin-top: 20px;
-      font-size: 28px;
-      color: #ffcc00;
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #ffd700;
     }
-    .info {
-      margin-top: 20px;
-      background: #1e1e1e;
+    .info, .thanks {
+      margin-top: 25px;
       padding: 15px;
       border-radius: 12px;
+      background: rgba(255,255,255,0.05);
       line-height: 1.8;
     }
     .label {
       font-weight: bold;
-      color: #ff8800;
+      color: #ff9800;
+    }
+    a {
+      color: #4fc3f7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #81d4fa;
+    }
+    .thanks h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      color: #90caf9;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- صورة اللعبة (غير الرابط حسب رغبتك) -->
+    <!-- صورة اللعبة -->
     <img class="game-img" src="https://i.ibb.co/bgtVdb8V/IMG-20250923-220903-074.jpg" alt="صورة اللعبة">
 
     <!-- اسم اللعبة -->
@@ -52,8 +69,23 @@
 
     <!-- معلومات التعريب -->
     <div class="info">
-      <p><span class="label">تعريب:</span> عمرو شاهين</p>
-      <p><span class="label">ناقل التعريب:</span> مراد صلاح</p>
+      <p><span class="label">تعريب:</span> 
+        <a href="https://x.com/amrshaheen61" target="_blank">عمرو شاهين</a>
+      </p>
+      <p><span class="label">ناقل التعريب:</span> 
+        <a href="https://t.me/gamershood1" target="_blank">مراد صلاح</a>
+      </p>
+    </div>
+
+    <!-- شكر خاص -->
+    <div class="thanks">
+      <h2>شكر خاص</h2>
+      <p>
+        كل التقدير للمذكورين على جهودهم الكبيرة في خدمة مجتمع اللاعبين 🙏  
+        <br>
+        <a href="https://example.com/amr" target="_blank">عمرو شاهين</a> &nbsp; | &nbsp; 
+        <a href="https://example.com/murad" target="_blank">مراد صلاح</a>
+      </p>
     </div>
   </div>
 </body>
