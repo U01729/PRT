@@ -33,7 +33,7 @@ const partsData = [
     {
         id: 'part6',
         name: 'الجزء السادس',
-        size: '219.67 MB', // تم التعديل إلى GB
+        size: '0.2 GB', // تم التعديل إلى GB
         url: 'https://akirabox.to/BnkmWVK86GR0/file' // استبدل برابط التحميل الفعلي
     }
     
